@@ -29,11 +29,11 @@
  
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
      
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
      
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
      
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 0);
      
     curl_setopt($ch, CURLOPT_POSTFIELDS, $tmsg);
  
