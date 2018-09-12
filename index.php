@@ -10,6 +10,7 @@
 
     <h1 id="temp">-</h1><br>
     <h1 id="humid">-</h1><br>
+    <h1 id="eco">-</h1><br>
       
       <script type="text/javascript">
         const APPID     = "greenbot"
