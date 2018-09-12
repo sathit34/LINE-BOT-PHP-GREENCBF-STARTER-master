@@ -7,7 +7,7 @@
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
  
   }
- function getMqttfromlineMsg($Topic,$lineMsg){
+ function getMqttfromlineMsg($lineMsg){
  
     $pos = strpos($lineMsg, ":");
     if($pos){
@@ -16,7 +16,7 @@
       $msg = $splitMsg[1];
       pubMqtt($topic,$msg);
     }else{
-      $topic = $Topic;
+      $topic = "raw";
       $msg = $lineMsg;
       pubMqtt($topic,$msg);
     }
