@@ -21,19 +21,19 @@ function send_LINE($msg){
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
       $ch = curl_init($url);
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "ON");
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $ON);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-      $result = curl_exec($ch);
-      curl_close($ch);
-      $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "OFF");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
       curl_setopt($ch, CURLOPT_POSTFIELDS, $OFF);
       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+      $result = curl_exec($ch);
+      curl_close($ch);
+      $ch = curl_init($url);
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "ON");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $ON);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
 
