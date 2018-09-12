@@ -5,7 +5,7 @@ function send_LINE($msg){
  $access_token = 'cmNWCPo+wzwC31jFYBgctzZ8hwNzAv+22WE6hC3agpA1LF/2L/i8qXBTfpw/0uWqCczVZqzU+olQl+W32u6Ib1ItEVPect35SMp8uRFS9c5riG+6yZVT8mordN+Noduqx+QSj+bx0m9GzdCrC9PDxgdB04t89/1O/w1cDnyilFU='; 
 
   $messages = [
-        'type' => '0',
+        'type' => 'text',
         'text' => $msg
         //'text' => $text
       ];
@@ -29,7 +29,7 @@ function send_LINE($msg){
       $result = curl_exec($ch);
       curl_close($ch);
 
-      echo $result . "\greencbf\led"; 
+      echo $result . "\r\n"; 
 }
 
 ?>
