@@ -28,10 +28,10 @@
             if(topic == "/greenbot/Temp"){
               $("#Temp").html(msg);  
             }
-		        if(topic == "/greenbot/humid"){
+	    if(topic == "/greenbot/humid"){
               $("#humid").html(msg);  
             }
-          if(topic == "/greenbot/humid"){
+            if(topic == "/greenbot/eco"){
               $("#eco").html(msg);  
             }
 		    });
